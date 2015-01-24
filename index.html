@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Organized Organics</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="./css/jqm-demos.css">
+	<link rel="shortcut icon" href="../favicon.ico">
+	<script src="http://debug-software.intel.com/target/target-script-min.js#6zSgEL1Ba3YU96zVxysXOHJ0jDkxBrhhfmt3XSnBWr4"></script>
+	<script src="intelxdk.js"></script>
+	<script src="cordova.js"></script>
+	<script src="xhr.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyBL_Mp0VJY5mOM1uGc-jT41FCN2z3XP5Z0"></script>
+	<script src="./js/jquery.js"></script>
+	<script src="./js/index.js"></script>
+	<script src="./js/kmobile.js"></script>
+	<script src="./js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="./js/jquery.dropotron.min.js"></script> 
+	<script src="./js/jquery.scrollgress.min.js"></script>
+	<script src="./js/skel.min.js"></script>
+<!--	<script src="./js/skel-layers.min.js"></script> 
+	// this js was making it not work -->
+	<script type="text/javascript" src="js/main2.js"></script> 
+	<script src="./js/init.js"></script>
+	<link rel="stylesheet" href="./css/skel.css" />
+	<link rel="stylesheet" href="./css/style.css" />
+	<link rel="stylesheet" href="./css/style-wide.css" />
+	<script>
+/*		$(document).on('pagecreate', function(event){
+			if(typeof intel === 'undefined') {
+		    	ready();
+	        }
+			else { */
+/*				alert("Intel is " + intel);
+				console.log("Intel is " + intel); */
+//				$.getScript("http://debug-software.intel.com/target/target-script-min.js#6zSgEL1Ba3YU96zVxysXOHJ0jDkxBrhhfmt3XSnBWr4");
+/*				onDeviceReady();
+			}
+    	}); */
+/*		if(typeof intel !== 'undefined') {
+			console.log("Intel defined.");
+			document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
+			alert("In heading setting event listener.");
+		};*/
+	</script>
+	<style>
+	    #map_canvas {
+	        width:  100%;
+			height: 600px;
+	<!		height: 380px; -->
+	<!		height: 80%;	-->
+	    }
+	</style>
+</head>
+
+<body>
+<!-- Start of first page: #one -->
+<div data-role="page" id="one" class="jqm-demos jqm-panel-page" data-quicklinks="true">
+	<div role="main" class="ui-content">
+		<section id="banner" class="banner">
+<img id="s-Image_2" class="image firer ie-background commentable" src="./images/b88f050b-a5a5-4d6a-821f-7db851b34562.png" alt="image">
+			<input class="inputtype" type="text" tabindex="-1" maxlength="100" value="Username">
+			<input class="inputtype" type="text" tabindex="-1" maxlength="100" value="Password">
+<!--			<h3>Show internal pages:</h3> -->
+			<ul class="actions">
+				<li><a href="#two" class="ui-btn button special" >Login</a></li>
+				<li><a href="#popup" class="ui-btn button" data-rel="dialog" data-transition="pop">Signup</a></li>
+			</ul>
+<!--			<p><a href="#two" class="ui-btn ui-shadow ui-corner-all">Show page "two"</a></p>
+			<p><a href="#popup" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p> -->
+		</section>
+
+	</div><!-- /content -->
+</div><!-- /page one -->
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="two" data-theme="a">
+
+	<div data-role="header" id="header2" class="alt">
+		<h1><a href="index.html">Test Page 2</a></h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<section id="banner2"  class="banner">
+			<h2>Two</h2>
+		<p>I have an id of "two" on my page container. I'm the second page container in this multi-page template.</p>
+<!--			<h3>Show internal pages:</h3> -->
+			<ul class="actions">
+				<li><a href="#one" data-direction="reverse" class="ui-btn button special">Back to page "one"</a></li>
+<!--				<li><a href="#popup" class="ui-btn button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></li> -->
+			</ul>
+		<p>Notice that the theme is different for this page because we've added a few <code>data-theme</code> swatch assigments here to show off how flexible it is. You can add any content or widget to these pages, but we're keeping these simple.</p>
+<!--		<p><a href="#one" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to page "one"</a></p> -->
+		</section>
+
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+<!-- Start of third page: #popup -->
+<div data-role="page" id="popup">
+
+	<div data-role="header" id="header3" class="alt">
+		<h1><a href="index.html">Dialog</a></h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<section id="banner3" class="banner">
+		<h2>Popup</h2>
+		<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>
+			<ul class="actions">
+				<li><a href="#one" data-rel="back" class="ui-btn button special">Back to page "one"</a></li>
+			</ul>
+<!--		<p><a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to page "one"</a></p> -->
+		</section>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+
+
+</div><!-- /page popup -->
+<div data-role="page" id="mappage" class="jqm-demos" data-quicklinks="true">
+	<div data-role="header">...</div>
+	<div role="main" class="ui-content">
+		<div id="mret"><a href="#one" data-direction="reverse" class="ui-btn button special">Return</a>
+		</div>
+		<div id="geostat" > <p style="text-align: center; color:black; font-size: 14px;">Please wait for map to load...</p> 
+		</div> <!-- geostat -->
+		<div style="width:100%;" id="map_cont"  style="background-color: #fff3a1;">
+			<div id="map_canvas" >
+			</div>
+		</div> <!-- map_cont -->
+	</div>
+	<div data-role="footer">...</div>
+
+</div><!-- /page -->
+
+</body>
+</html>
+
