@@ -91,7 +91,7 @@
 				Happy Ville, CA 95001<br>
 				United States of America</p>
 			<div id="s-Label_1" class="label firer ie-background commentable">
-<img id="s-Image_4" class="image firer click ie-background commentable" src="./images/74ad39f3-647f-49c3-8597-a27299c3e83b.png" alt="image">
+<a href="#farmmanagement"><img id="s-Image_4" class="image firer click ie-background commentable" src="./images/74ad39f3-647f-49c3-8597-a27299c3e83b.png" alt="image"></a>
 <img id="s-Image_5" class="image firer click ie-background commentable" src="./images/150c7a85-32b9-4741-9b7a-8930173814f1.png" alt="image">
 <img id="s-Image_6" class="image firer click ie-background commentable" src="./images/1e44303b-9e31-48e3-935b-792f857e9a5c.png" alt="image"><br>
 <img id="s-Image_7" class="image firer ie-background commentable" src="./images/7fd1b02d-c2ab-4e8f-b6b9-c5bfb121d890.png" alt="image">
@@ -113,34 +113,37 @@
 	</div><!-- /content -->
 
 	<div data-role="footer">
-		<h4>Page Footer</h4>
 	</div><!-- /footer -->
 </div><!-- /page two -->
-
-<!-- Start of third page: #popup -->
-<div data-role="page" id="popup">
+<!-- Start of farm management page: #two -->
+<div data-role="page" id="farmmanagement" data-theme="a">
 
 	<div data-role="header" id="header3" class="alt">
-		<h1><a href="index.html">Dialog</a></h1>
+<!--		<h1><a href="index.html">Farm Mangement</a></h1> -->
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-		<section id="banner3" class="banner">
-		<h2>Popup</h2>
-		<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>
+		<section id="banner2"  class="banner">
+			<h3>Farm Management</h3>
+			<div id="supervisors">
+			<img id="farmmanimg2" class="image firer click ie-background commentable" src="./images/74ad39f3-647f-49c3-8597-a27299c3e83b.png" alt="image">
+			<h2> Supervisors</h2>
+				<div id="s-Label_1" class="label firer ie-background commentable">
+<a href="#farmmanagementadd"><img id="s-Image_4" class="image firer click ie-background commentable" src="./images/3396caaf-d173-4520-b972-9a926bde2d87.png" alt="image"></a>
+<a href="#farmmanagements1"><img id="s-Image_4" class="image firer click ie-background commentable" src="./images/9d38e371-25e6-4e25-a25e-e6d273296b9d.jpg" alt="image"></a>
+<a href="#farmmanagements1"><img id="s-Image_4" class="image firer click ie-background commentable" src="./images/fa62d3dc-df4d-461c-a0df-5ffb6b7346fb.png" alt="image"></a>
+				</div>
 			<ul class="actions">
-				<li><a href="#one" data-rel="back" class="ui-btn button special">Back to page "one"</a></li>
+				<li><a href="#two" data-direction="reverse" class="ui-btn button special">Back</a></li>
+<!--				<li><a href="#popup" class="ui-btn button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></li> -->
 			</ul>
-<!--		<p><a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to page "one"</a></p> -->
+			</div>
 		</section>
 	</div><!-- /content -->
-
 	<div data-role="footer">
-		<h4>Page Footer</h4>
 	</div><!-- /footer -->
+</div><!-- /page farmmanagement -->
 
-
-</div><!-- /page popup -->
 <div data-role="page" id="mappage" class="jqm-demos" data-quicklinks="true">
 	<div data-role="header">...</div>
 	<div role="main" class="ui-content">
