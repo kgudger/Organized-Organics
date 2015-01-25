@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "7426fb9f-1da0-4657-9ce5-8642a37f836a",
-      "lastModifiedDate": 1422190396959,
+      "lastModifiedDate": 1422224588893,
       "creationDate": 1422130897842
     },
     "sourceDirectory": "",
@@ -138,9 +138,10 @@
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "cordovaCLIVersion_": "3.5",
-        "appVersion_": "0.0.1",
+        "appVersion_": "0.9.9",
         "appVersionCode_": "1",
-        "crosswalkVersion_": "stable"
+        "crosswalkVersion_": "stable",
+        "appDescription_": ""
       },
       "Android-Crosswalk": {
         "platform_": "android",

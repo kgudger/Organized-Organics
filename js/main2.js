@@ -117,7 +117,10 @@
 			title: 'Current Position'
 		});
 		marker.setMap(_map);
-	    var infoWindow;
+
+		buildField(36.655, -121.79, "#FF0000", "1", "Beets");
+
+/*	    var infoWindow;
 		var pname;
 		var myLatlng;
 		var field1Coords = [
@@ -160,8 +163,10 @@
             infoWindow1.setContent(pname1);
         	infoWindow1.open(_map, marker);
 		});
+*/
+		buildField(36.6449, -121.788, "#00FF00", "2", "Lettuce");
 
-		var field2Coords = [
+/*		var field2Coords = [
 			new google.maps.LatLng(36.6502227, -121.7946188),
 			new google.maps.LatLng(36.645, -121.7946188),
 			new google.maps.LatLng(36.6449, -121.788),
@@ -201,8 +206,10 @@
 	        infoWindow2.setContent(pname2);
         	infoWindow2.open(_map, marker);
 		});
+*/
+		buildField(36.645, -121.80, "#0000FF", "3", "Carrots");
 
-		var field3Coords = [
+/*		var field3Coords = [
 			new google.maps.LatLng(36.6502227, -121.7946188),
 			new google.maps.LatLng(36.645, -121.7946188),
 			new google.maps.LatLng(36.645, -121.80),
@@ -243,7 +250,10 @@
 	        infoWindow3.setContent(pname3);
         	infoWindow3.open(_map, marker);
 		});
-		var field4Coords = [
+*/
+		buildField(36.655, -121.801, "#FFFF00", "4", "Cabbage");
+
+/*		var field4Coords = [
 			new google.maps.LatLng(36.6502227, -121.7946188),
 			new google.maps.LatLng(36.655, -121.7946188),
 			new google.maps.LatLng(36.6551, -121.801),
@@ -284,8 +294,63 @@
 	        infoWindow4.setContent(pname4);
         	infoWindow4.open(_map, marker);
 		});
-		bounds.extend(latlng);
-		document.getElementById("geostat").innerHTML="";
+//		bounds.extend(latlng);
+*/		document.getElementById("geostat").innerHTML="";
+	};
+
+/**	buildField
+ *	builds field from lat lon
+ *
+ *	@param latitude is farthest latitude from center
+ *	@param longitude is farthest longitude from center
+ *	@param color is color of polygon
+ *	@param cname is name of field
+ *	@param crop is crop type
+ */
+	function buildField(latitude, longitude, color, cname, crop) {
+		var fieldCoords = [
+			new google.maps.LatLng(36.6502227, -121.7946188),
+			new google.maps.LatLng(latitude, -121.7946188),
+			new google.maps.LatLng(latitude, longitude),
+			new google.maps.LatLng(36.6502227, longitude),
+			new google.maps.LatLng(36.6502227, -121.7946188)
+		];
+
+  // Construct the polygon.
+  		var cropField = new google.maps.Polygon({
+		    paths: fieldCoords,
+		   	strokeColor: color,
+		    strokeOpacity: 0.8,
+		    strokeWeight: 2,
+		    fillColor: color,
+		    fillOpacity: 0.35,
+		    draggable: true,
+		    editable: true,
+		    geodesic: true
+		});
+
+		cropField.setMap(_map);
+
+		var latavg = ((latitude - 36.650227) / 2) + 36.650227 ;
+		var lonavg = ((longitude - (-121.7946188)) / 2) - 121.7946188 ;
+		var myLatlng = new google.maps.LatLng(latavg,lonavg);
+		var marker = new google.maps.Marker({
+			position: myLatlng,
+			map: _map,
+			title: 'Current Position'
+		});
+		marker.setMap(_map);
+	    var infoWindow = new google.maps.InfoWindow();
+		var pname = '<div style="color: black;">' + "Field " + cname + "<br>" + 
+			'date planted: 24 Jan 15<br>' +
+			'stock company: MV Seeds<br>' +  
+			'lot number: 06ncai01<br>' +
+			'plant type: ' + crop +'</div>';
+		google.maps.event.addListener(marker, 'click', function() {
+  			console.log('Vertex moved on outer path.');
+	        infoWindow.setContent(pname);
+        	infoWindow.open(_map, marker);
+		});
 	};
 
 	function handleNoGeolocation(errorFlag) {
