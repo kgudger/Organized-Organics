@@ -957,6 +957,22 @@
 				background-color: #e4886a;
 			}
 
+			.banner input[type="submit"].login,
+			.banner input[type="reset"].login,
+			.banner input[type="button"].login,
+			.banner .button.login {
+				background: url("images/googlebutton.jpg");
+				/*color: #fff !important;*/
+			}
+			
+			.banner input[type="submit"].login2,
+			.banner input[type="reset"].login2,
+			.banner input[type="button"].login2,
+			.banner .button.login2 {
+				background: url("images/facebookbutton.png");
+				/*color: #fff !important;*/
+			}
+
 		input[type="submit"].disabled, input[type="submit"]:disabled,
 		input[type="reset"].disabled,
 		input[type="reset"]:disabled,
