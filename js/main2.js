@@ -117,6 +117,9 @@
 			title: 'Current Position'
 		});
 		marker.setMap(_map);
+	    var infoWindow;
+		var pname;
+		var myLatlng;
 		var field1Coords = [
 			new google.maps.LatLng(36.6502227, -121.7946188),
 			new google.maps.LatLng(36.655, -121.7946188),
@@ -139,6 +142,24 @@
 		});
 
 		cropField1.setMap(_map);
+		myLatlng = new google.maps.LatLng(36.652, -121.792);
+		marker = new google.maps.Marker({
+			position: myLatlng,
+			map: _map,
+			title: 'Current Position'
+		});
+		marker.setMap(_map);
+	    var infoWindow1 = new google.maps.InfoWindow();
+		var pname1 = '<div style="color: black;">' + "Field 1<br>" + 
+			'date planted: 24 Jan 15<br>' +
+			'stock company: MV Seeds<br>' +  
+			'lot number: 07bcdi07<br>' +
+			'plant type: Beets' +'</div>';
+		google.maps.event.addListener(marker, 'click', function() {
+  			console.log('Vertex moved on outer path.');
+            infoWindow1.setContent(pname1);
+        	infoWindow1.open(_map, marker);
+		});
 
 		var field2Coords = [
 			new google.maps.LatLng(36.6502227, -121.7946188),
@@ -162,6 +183,24 @@
 		});
 
 		cropField2.setMap(_map);
+		myLatlng = new google.maps.LatLng(36.648, -121.792);
+		marker = new google.maps.Marker({
+			position: myLatlng,
+			map: _map,
+			title: 'Current Position'
+		});
+		marker.setMap(_map);
+	    var infoWindow2 = new google.maps.InfoWindow();
+		var pname2 = '<div style="color: black;">' + "Field 2<br>" + 
+			'date planted: 24 Jan 15<br>' +
+			'stock company: MV Seeds<br>' +  
+			'lot number: 05ecgi05<br>' +
+			'plant type: Lettuce' +'</div>';
+		google.maps.event.addListener(marker, 'click', function() {
+  			console.log('Vertex moved on outer path.');
+	        infoWindow2.setContent(pname2);
+        	infoWindow2.open(_map, marker);
+		});
 
 		var field3Coords = [
 			new google.maps.LatLng(36.6502227, -121.7946188),
@@ -186,6 +225,24 @@
 
 		cropField3.setMap(_map);
 
+		myLatlng = new google.maps.LatLng(36.648, -121.798);
+		marker = new google.maps.Marker({
+			position: myLatlng,
+			map: _map,
+			title: 'Current Position'
+		});
+		marker.setMap(_map);
+	    var infoWindow3 = new google.maps.InfoWindow();
+		var pname3 = '<div style="color: black;">' + "Field 3<br>" + 
+			'date planted: 24 Jan 15<br>' +
+			'stock company: MV Seeds<br>' +  
+			'lot number: 08ecbi03<br>' +
+			'plant type: Carrots' +'</div>';
+		google.maps.event.addListener(marker, 'click', function() {
+  			console.log('Vertex moved on outer path.');
+	        infoWindow3.setContent(pname3);
+        	infoWindow3.open(_map, marker);
+		});
 		var field4Coords = [
 			new google.maps.LatLng(36.6502227, -121.7946188),
 			new google.maps.LatLng(36.655, -121.7946188),
@@ -209,16 +266,25 @@
 
 		cropField4.setMap(_map);
 
-		bounds.extend(latlng);
-	    var infoWindow = new google.maps.InfoWindow();
-		var pname = '<div style="color: black;">' + "Test4" + '</div>';
-		google.maps.event.addListener(cropField4, 'click', function() {
-  			console.log('Vertex moved on outer path.');
-            infoWindow.close();
-	        infoWindow.setContent(pname);
-        	infoWindow.open(_map, cropField4);
-
+		myLatlng = new google.maps.LatLng(36.652, -121.798);
+		marker = new google.maps.Marker({
+			position: myLatlng,
+			map: _map,
+			title: 'Current Position'
 		});
+		marker.setMap(_map);
+	    var infoWindow4 = new google.maps.InfoWindow();
+		var pname4 = '<div style="color: black;">' + "Field 4<br>" + 
+			'date planted: 24 Jan 15<br>' +
+			'stock company: MV Seeds<br>' +  
+			'lot number: 06ncai01<br>' +
+			'plant type: Cabbage' +'</div>';
+		google.maps.event.addListener(marker, 'click', function() {
+  			console.log('Vertex moved on outer path.');
+	        infoWindow4.setContent(pname4);
+        	infoWindow4.open(_map, marker);
+		});
+		bounds.extend(latlng);
 	};
 
 	function handleNoGeolocation(errorFlag) {
