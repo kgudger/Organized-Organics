@@ -28,17 +28,17 @@
 	<link rel="stylesheet" href="./css/style.css" />
 	<link rel="stylesheet" href="./css/style-wide.css" />
 	<script>
-/*		$(document).on('pagecreate', function(event){
+		$(document).on('pagecreate', function(event){
 			if(typeof intel === 'undefined') {
 		    	ready();
 	        }
-			else { */
+			else { 
 /*				alert("Intel is " + intel);
 				console.log("Intel is " + intel); */
 //				$.getScript("http://debug-software.intel.com/target/target-script-min.js#6zSgEL1Ba3YU96zVxysXOHJ0jDkxBrhhfmt3XSnBWr4");
-/*				onDeviceReady();
+				onDeviceReady();
 			}
-    	}); */
+    	}); 
 /*		if(typeof intel !== 'undefined') {
 			console.log("Intel defined.");
 			document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
@@ -66,8 +66,9 @@
 <!--			<h3>Show internal pages:</h3> -->
 			<ul class="actions">
 				<li><a href="#two" class="ui-btn button special" >Login</a></li>
-				<li><a href="#popup" class="ui-btn button" data-rel="dialog" data-transition="pop">Signup</a></li>
+				<li><a href="#popup" class="ui-btn button" data-rel="dialog" data-transition="pop">Google Sign In</a></li>
 			</ul>
+				<li><a href="#" class="ui-btn button" data-rel="dialog" data-transition="pop">Signup</a></li>
 <!--			<p><a href="#two" class="ui-btn ui-shadow ui-corner-all">Show page "two"</a></p>
 			<p><a href="#popup" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p> -->
 		</section>
@@ -220,17 +221,17 @@
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-		<section id="banner"  class="banner">
+		<section id="banner2"  class="banner">
 			<h2>Farm Mangement</h2>
 			<div id="productionhead2">
 			<img id="farmprodimg1" class="image firer click ie-background commentable" src="./images/a6308f4c-e668-4af0-ab7a-ce9ad6eaad34.png" alt="image">
 			<h3 id="farmprodhead">Food Production</h3>
 			</div>
 			<div id="s-Label_5" class="label firer ie-background commentable">
-<a href="#farmplanting"><img id="ps-Image_4" class="onethird image firer click ie-background commentable" src="./images/7703fe35-4a30-4318-b9b9-394477f1128e.png" alt="image"></a>
-<a href="#farmgrowth"><img id="ps-Image_5" class="onethird image firer click ie-background commentable" src="./images/76d74242-89d2-483a-bf95-5d4d2d24b9b1.png" alt="image"></a>
-<a href="#farmhavest"><img id="ps-Image_6" class="onethird image firer click ie-background commentable" src="./images/4634bd2d-fcf4-490f-bc4b-473e40938970.png" alt="image"></a><br>
-<a href="#farmprocess"><img id="ps-Image_7" class="onethird image firer click ie-background commentable" src="./images/404d8e1e-178a-4eca-926b-daf689453d9d.png" alt="image"></a><br>
+<a href="#foodplanting"><img id="ps-Image_4" class="onethird image firer click ie-background commentable" src="./images/7703fe35-4a30-4318-b9b9-394477f1128e.png" alt="image"></a>
+<a href="#foodgrowth"><img id="ps-Image_5" class="onethird image firer click ie-background commentable" src="./images/76d74242-89d2-483a-bf95-5d4d2d24b9b1.png" alt="image"></a>
+<a href="#foodharvest"><img id="ps-Image_6" class="onethird image firer click ie-background commentable" src="./images/4634bd2d-fcf4-490f-bc4b-473e40938970.png" alt="image"></a><br>
+<a href="#foodprocess"><img id="ps-Image_7" class="onethird image firer click ie-background commentable" src="./images/404d8e1e-178a-4eca-926b-daf689453d9d.png" alt="image"></a><br>
 
 			</div>
 
@@ -246,19 +247,135 @@
 
 	<div data-role="footer">
 	</div><!-- /footer -->
-</div><!-- /page two -->
+</div><!-- /page foodproduction -->
+
+<div data-role="page" id="foodplanting" data-theme="a">
+
+	<div data-role="header" id="headerplanting" class="alt">
+<!--		<h1><a href="index.html">Farm Mangement</a></h1> -->
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<section id="banner2"  class="banner">
+			<h2>Farm Mangement</h2>
+			<div id="plantinghead2">
+			<img id="farmprodimg2" class="image firer click ie-background commentable" src="./images/7703fe35-4a30-4318-b9b9-394477f1128e.png" alt="image">
+			<h3 id="farmprodhead">Planting</h3>
+			</div>
+			<div id="geostat" > <p style="text-align: center; color:black; font-size: 14px;">Please wait for map to load...</p> 
+			</div> <!-- geostat -->
+			<div style="width:100%;" id="map_cont"  style="background-color: #fff3a1;">
+				<div id="map_canvas" >
+				</div>
+			</div> <!-- map_cont -->
+			<div id="pl-Label_5" class="label firer ie-background commentable">
+				<table id="planttable"><tbody>
+					<tr><td><strong>#</strong></td><td><strong>Row Type</strong></td><td><strong>Location</strong></td>
+					</tr>
+					<tr><td>1</td><td>Kale</td><td>Latitude : 36.977173 | Longitude : -121.899402</td></tr>
+					<tr><td>2</td><td>Carrots</td>
+						<td>Latitude : 36.977173 | Longitude : -121.899402</td></tr>
+					<tr> <td>3</td><td>Beets</td>
+						<td>Latitude : 36.977173 | Longitude : -121.899402</td></tr>
+					<tr> <td>3</td><td>Onions</td>
+						<td>Latitude : 36.977173 | Longitude : -121.899402</td></tr>
+					<tr> <td>3</td><td>Baby Lettuce</td>
+						<td>Latitude : 36.977173 | Longitude : -121.899402</td></tr>
+					<tr> <td>1</td><td>Parsnips</td>
+						<td>Latitude : 36.977173 | Longitude : -121.899402</td></tr>
+					<tr> <td>3</td><td>Carrots</td>
+						<td>Latitude : 36.977173 | Longitude : -121.899402</td></tr>
+				</tbody></table>
+			</div>
+
+<!--			<h3>Show internal pages:</h3> -->
+			<ul class="actions">
+				<li><a href="#foodproduction" data-direction="reverse" class="ui-btn button special">Back</a></li>
+<!--				<li><a href="#popup" class="ui-btn button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></li> -->
+			</ul>
+<!--		<p><a href="#one" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to page "one"</a></p> -->
+		</section>
+
+	</div><!-- /content -->
+
+	<div data-role="footer">
+	</div><!-- /footer -->
+</div><!-- /page foodplanting -->
+
+<div data-role="page" id="foodgrowth" data-theme="a">
+
+	<div data-role="header" id="headergrowth" class="alt">
+<!--		<h1><a href="index.html">Farm Mangement</a></h1> -->
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<section id="banner2"  class="banner">
+			<h2>Farm Mangement</h2>
+			<div id="growthhead2">
+			<img id="farmgrowimg2" class="image firer click ie-background commentable" src="./images/76d74242-89d2-483a-bf95-5d4d2d24b9b1.png" alt="image">
+			<h3 id="farmgrowhead">Growth</h3>
+			</div>
+			<ul class="actions">
+				<li><a href="#foodproduction" data-direction="reverse" class="ui-btn button special">Back</a></li>
+<!--				<li><a href="#popup" class="ui-btn button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></li> -->
+			</ul>
+		</section>
+	</div><!-- /content -->
+	<div data-role="footer">
+	</div><!-- /footer -->
+</div><!-- /page foodgrowth -->
+
+<div data-role="page" id="foodharvest" data-theme="a">
+
+	<div data-role="header" id="headerharvest" class="alt">
+<!--		<h1><a href="index.html">Farm Mangement</a></h1> -->
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<section id="banner2"  class="banner">
+			<h2>Farm Mangement</h2>
+			<div id="harvesthead2">
+			<img id="farmharvimg2" class="image firer click ie-background commentable" src="./images/4634bd2d-fcf4-490f-bc4b-473e40938970.png" alt="image">
+			<h3 id="farmharvhead">Harvest</h3>
+			</div>
+			<ul class="actions">
+				<li><a href="#foodproduction" data-direction="reverse" class="ui-btn button special">Back</a></li>
+<!--				<li><a href="#popup" class="ui-btn button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></li> -->
+			</ul>
+		</section>
+	</div><!-- /content -->
+	<div data-role="footer">
+	</div><!-- /footer -->
+</div><!-- /page foodharvest -->
+
+<div data-role="page" id="foodprocess" data-theme="a">
+
+	<div data-role="header" id="headerprocess" class="alt">
+<!--		<h1><a href="index.html">Farm Mangement</a></h1> -->
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<section id="banner2"  class="banner">
+			<h2>Farm Mangement</h2>
+			<div id="processhead2">
+			<img id="farmprocimg2" class="image firer click ie-background commentable" src="./images/404d8e1e-178a-4eca-926b-daf689453d9d.png" alt="image">
+			<h3 id="farmprochead">Processing</h3>
+			</div>
+			<ul class="actions">
+				<li><a href="#foodproduction" data-direction="reverse" class="ui-btn button special">Back</a></li>
+<!--				<li><a href="#popup" class="ui-btn button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></li> -->
+			</ul>
+		</section>
+	</div><!-- /content -->
+	<div data-role="footer">
+	</div><!-- /footer -->
+</div><!-- /page foodprocess -->
 
 <div data-role="page" id="mappage" class="jqm-demos" data-quicklinks="true">
 	<div data-role="header">...</div>
 	<div role="main" class="ui-content">
 		<div id="mret"><a href="#one" data-direction="reverse" class="ui-btn button special">Return</a>
 		</div>
-		<div id="geostat" > <p style="text-align: center; color:black; font-size: 14px;">Please wait for map to load...</p> 
-		</div> <!-- geostat -->
-		<div style="width:100%;" id="map_cont"  style="background-color: #fff3a1;">
-			<div id="map_canvas" >
-			</div>
-		</div> <!-- map_cont -->
 	</div>
 	<div data-role="footer">...</div>
 

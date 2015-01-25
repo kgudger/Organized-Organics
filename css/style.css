@@ -1280,7 +1280,7 @@
 		.banner input[type="reset"],
 		.banner input[type="button"],
 		.banner .button {
-			background-color: transparent;
+				background-color: rgba(0, 0, 0, 0.3);
 			box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
 			color: #fff;
 			min-width: 12em;
@@ -1290,7 +1290,7 @@
 			.banner input[type="reset"]:hover,
 			.banner input[type="button"]:hover,
 			.banner .button:hover {
-				background-color: rgba(0, 0, 0, 0.1);
+				background-color: rgba(0, 0, 0, 0.5);
 				color: #FFCCFF;
 			}
 
@@ -1298,7 +1298,7 @@
 			.banner input[type="reset"]:active,
 			.banner input[type="button"]:active,
 			.banner .button:active {
-				background-color: rgba(255, 255, 255, 0.2);
+				background-color: rgba(255, 255, 255, 0.3);
 			}
 
 			.banner input[type="submit"].special,
@@ -1466,4 +1466,8 @@
 	}
 	.onethird {
 		width: 30%;
+	}
+	#planttable tr {
+	    background-color: #f8f8f8 !important;
+		color: #000 !important;
 	}

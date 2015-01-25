@@ -81,6 +81,7 @@
 	function showPosition(position) {
 	    currentLatitude = position.coords.latitude;
 	    currentLongitude = position.coords.longitude;
+//		console.log("lat=" + currentLatitude + ", lon=" + currentLongitude);36.6502227, lon=-121.79461880000001
 	    initialize(); // assigns google map
 	};
 
@@ -102,8 +103,8 @@
 	            style: google.maps.ZoomControlStyle.SMALL,
 //	          position: google.maps.ControlPosition.LEFT_TOP
 		    },
-    	    zoom: 12,
-    	    mapTypeId: google.maps.MapTypeId.ROADMAP
+    	    zoom: 16,
+    	    mapTypeId: google.maps.MapTypeId.TERRAIN
     	};
         _map = new google.maps.Map(mapCanvas, mapOptions);
 //		setTimeout("$('#map_canvas').gmap('refresh')",500);
@@ -116,7 +117,108 @@
 			title: 'Current Position'
 		});
 		marker.setMap(_map);
+		var field1Coords = [
+			new google.maps.LatLng(36.6502227, -121.7946188),
+			new google.maps.LatLng(36.655, -121.7946188),
+			new google.maps.LatLng(36.655, -121.79),
+			new google.maps.LatLng(36.6502227, -121.79),
+			new google.maps.LatLng(36.6502227, -121.7946188)
+		];
+
+  // Construct the polygon.
+  		cropField1 = new google.maps.Polygon({
+		    paths: field1Coords,
+		   	strokeColor: '#FF0000',
+		    strokeOpacity: 0.8,
+		    strokeWeight: 2,
+		    fillColor: '#FF0000',
+		    fillOpacity: 0.35,
+		    draggable: true,
+		    editable: true,
+		    geodesic: true
+		});
+
+		cropField1.setMap(_map);
+
+		var field2Coords = [
+			new google.maps.LatLng(36.6502227, -121.7946188),
+			new google.maps.LatLng(36.645, -121.7946188),
+			new google.maps.LatLng(36.6449, -121.788),
+			new google.maps.LatLng(36.6502227, -121.79),
+			new google.maps.LatLng(36.6502227, -121.7946188)
+		];
+
+  // Construct the polygon.
+  		cropField2 = new google.maps.Polygon({
+		    paths: field2Coords,
+		   	strokeColor: '#00FF00',
+		    strokeOpacity: 0.8,
+		    strokeWeight: 2,
+		    fillColor: '#00FF00',
+		    fillOpacity: 0.35,
+		    draggable: true,
+		    editable: true,
+		    geodesic: true
+		});
+
+		cropField2.setMap(_map);
+
+		var field3Coords = [
+			new google.maps.LatLng(36.6502227, -121.7946188),
+			new google.maps.LatLng(36.645, -121.7946188),
+			new google.maps.LatLng(36.645, -121.80),
+			new google.maps.LatLng(36.6502227, -121.80),
+			new google.maps.LatLng(36.6502227, -121.7946188)
+		];
+
+  // Construct the polygon.
+  		cropField3 = new google.maps.Polygon({
+		    paths: field3Coords,
+		   	strokeColor: '#0000FF',
+		    strokeOpacity: 0.8,
+		    strokeWeight: 2,
+		    fillColor: '#0000FF',
+		    fillOpacity: 0.35,
+		    draggable: true,
+		    editable: true,
+		    geodesic: true
+		});
+
+		cropField3.setMap(_map);
+
+		var field4Coords = [
+			new google.maps.LatLng(36.6502227, -121.7946188),
+			new google.maps.LatLng(36.655, -121.7946188),
+			new google.maps.LatLng(36.6551, -121.801),
+			new google.maps.LatLng(36.6502227, -121.8),
+			new google.maps.LatLng(36.6502227, -121.7946188)
+		];
+
+  // Construct the polygon.
+  		cropField4 = new google.maps.Polygon({
+		    paths: field4Coords,
+		   	strokeColor: '#FFFF00',
+		    strokeOpacity: 0.8,
+		    strokeWeight: 2,
+		    fillColor: '#FFFF00',
+		    fillOpacity: 0.35,
+		    draggable: true,
+		    editable: true,
+		    geodesic: true
+		});
+
+		cropField4.setMap(_map);
+
 		bounds.extend(latlng);
+	    var infoWindow = new google.maps.InfoWindow();
+		var pname = '<div style="color: black;">' + "Test4" + '</div>';
+		google.maps.event.addListener(cropField4, 'click', function() {
+  			console.log('Vertex moved on outer path.');
+            infoWindow.close();
+	        infoWindow.setContent(pname);
+        	infoWindow.open(_map, cropField4);
+
+		});
 	};
 
 	function handleNoGeolocation(errorFlag) {

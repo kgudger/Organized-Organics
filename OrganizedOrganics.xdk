@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "7426fb9f-1da0-4657-9ce5-8642a37f836a",
-      "lastModifiedDate": 1422131385783,
+      "lastModifiedDate": 1422146961986,
       "creationDate": 1422130897842
     },
     "sourceDirectory": "",
@@ -62,10 +62,39 @@
         },
         "isActive_": true,
         "appName_": "OrganizedOrganics",
-        "appID_": "not.yet.specified",
+        "appID_": "com.organizedorganics",
         "appAccess_": "*",
         "icons_": [],
-        "splashes_": [],
+        "splashes_": [
+          {
+            "relPath": "images/Splashx.jpg",
+            "density": "xhdpi",
+            "height": 960,
+            "width": 720,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "images/Splashh.jpg",
+            "density": "hdpi",
+            "height": 640,
+            "width": 480,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "images/Splashm.jpg",
+            "density": "mdpi",
+            "height": 470,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "images/Splashl.jpg",
+            "density": "ldpi",
+            "height": 426,
+            "width": 320,
+            "orientation": "portrait"
+          }
+        ],
         "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
