@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "7426fb9f-1da0-4657-9ce5-8642a37f836a",
-      "lastModifiedDate": 1422146961986,
+      "lastModifiedDate": 1422190396959,
       "creationDate": 1422130897842
     },
     "sourceDirectory": "",
@@ -47,6 +47,20 @@
         "selectedState": "Auto",
         "data": {},
         "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.network-information",
+        "version": "0.2.8",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.geolocation",
+        "version": "0.3.10",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {}
       }
     ],
     "serviceMethods": [],
@@ -64,7 +78,32 @@
         "appName_": "OrganizedOrganics",
         "appID_": "com.organizedorganics",
         "appAccess_": "*",
-        "icons_": [],
+        "icons_": [
+          {
+            "relPath": "images/logox.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          },
+          {
+            "relPath": "images/logoh.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "images/logom.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "images/logol.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          }
+        ],
         "splashes_": [
           {
             "relPath": "images/Splashx.jpg",

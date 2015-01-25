@@ -67,8 +67,8 @@
    	      	navigator.geolocation.getCurrentPosition(showPosition, function() {
 				handleNoGeolocation(true);
 			});
-		document.getElementById("geostat").innerHTML=
-			("lat=" + currentLatitude + ", lon=" + currentLongitude);
+/*		document.getElementById("geostat").innerHTML=
+			("lat=" + currentLatitude + ", lon=" + currentLongitude);*/
 		} else {
     // Browser doesn't support Geolocation
 			handleNoGeolocation(false);
@@ -285,6 +285,7 @@
         	infoWindow4.open(_map, marker);
 		});
 		bounds.extend(latlng);
+		document.getElementById("geostat").innerHTML="";
 	};
 
 	function handleNoGeolocation(errorFlag) {

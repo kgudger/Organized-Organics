@@ -961,7 +961,9 @@
 			.banner input[type="reset"].login,
 			.banner input[type="button"].login,
 			.banner .button.login {
-				background: url("images/googlebutton.jpg");
+				background: url("../images/google_lg.png");
+				border: 0;
+				background-size: cover; /* To fill the dimensions of container (button) */
 				/*color: #fff !important;*/
 			}
 			
@@ -969,7 +971,19 @@
 			.banner input[type="reset"].login2,
 			.banner input[type="button"].login2,
 			.banner .button.login2 {
-				background: url("images/facebookbutton.png");
+				background: url("../images/facebook_lg.png");
+				border: 0;
+				background-size: cover; /* To fill the dimensions of container (button) */
+				/*color: #fff !important;*/
+			}
+
+			.banner input[type="submit"].login3,
+			.banner input[type="reset"].login3,
+			.banner input[type="button"].login3,
+			.banner .button.login3 {
+				background: url("../images/twitter_lg.png");
+				border: 0;
+				background-size: cover; /* To fill the dimensions of container (button) */
 				/*color: #fff !important;*/
 			}
 
@@ -1259,6 +1273,10 @@
 		background-image: url("images/overlay.png"), url("../images/qvVtt.jpg");
 	}
 
+	#bannercolor {
+		background-color: #8dc63f;
+	}
+
 	.banner {
 		background-attachment: scroll,							fixed;
 		background-color: #666;
@@ -1486,4 +1504,7 @@
 	#planttable tr {
 	    background-color: #f8f8f8 !important;
 		color: #000 !important;
+	}
+	.myheight {
+		height: 10%;
 	}
